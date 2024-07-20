@@ -6,10 +6,6 @@ import GitHub from '../icons/GitHub.astro';
 
 const navLinks = [
   {
-    name: "Login",
-    route: "/login",
-  },
-  {
     name: "About",
     route: "/about",
   }
@@ -17,14 +13,14 @@ const navLinks = [
 ---
 
 <div class="border-b-4 sticky border-b-black w-full text-gray-700 bg-white flex flex-col px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-  <a href="/" class="text-lg font-semibold p-4 tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Brutality</a>
+  <a href="/" class="text-lg font-semibold p-4 tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline hover:text-purple-600">Brutality</a>
   <nav class="flex justify-center items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
     {
       navLinks.map((route) => (
         <NavLink title={route.name} link={route.route}/>
       ))
     }
-    <NavLink link='/'>
+    <NavLink link='https://github.com/CodingGaby/brutality' nav={true}>
       <GitHub/>
     </NavLink>
     <LoginBtn/>
