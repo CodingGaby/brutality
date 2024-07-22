@@ -12,7 +12,7 @@ const { title, link, nav } = Astro.props;
   !nav 
     ? 
       <a 
-        class="px-4 py-2 mt-2 text-sm font-semibold md:mt-0 md:ml-4 focus:text-gray-900 hover:underline transition duration-300 hover:text-purple-600" 
+        class="px-4 py-2 text-sm font-semibold md:mt-0 md:ml-4 focus:text-gray-900 hover:underline transition duration-300 hover:text-purple-600 hidden md:block" 
         href={link}>
         {
           title 
@@ -22,7 +22,7 @@ const { title, link, nav } = Astro.props;
       </a>
     :
       <a 
-        class="px-4 py-2 mt-2 text-sm font-semibold md:mt-0 md:ml-4 focus:text-gray-900 hover:underline transition duration-300 hover:text-purple-600" 
+        class="px-4 py-2 text-sm font-semibold md:mt-0 md:ml-4 focus:text-gray-900 hover:underline transition duration-300 hover:text-purple-600" 
         href={link} target="_blank">
         {
           title 

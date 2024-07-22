@@ -1,5 +1,7 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Navbar from '../components/ui/navbar/Navbar.astro';
+import Modal from '../components/Modal.astro';
 
 interface Props {
 	title: string;
@@ -19,11 +21,16 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+		<ViewTransitions/>
 		<title>{title}</title>
 	</head>
 	<body>
 		<Navbar/>
 		<slot />
+		<Modal/>
+		<div class="flex items-center  justify-center w-full top-full">
+			<p>Made with ❤️ by <a target="_blank" class="underline" href="https://github.com/CodingGaby">CodingGaby</a></p>
+		</div>
 	</body>
 </html>
 <style is:global>
@@ -40,7 +47,6 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		background: #FFF5EA;
 		background-size: 224px;
 	}
 </style>
